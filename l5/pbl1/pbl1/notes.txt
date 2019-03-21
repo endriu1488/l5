@@ -1,0 +1,88 @@
+﻿inversarea legăturilor lista simplu înlănțuită
+
+Element *p,*q,*r;
+r=NULL;
+p=cap;
+q=p->leg;
+while(q !=NULL){
+	p->leg=r;
+	r=p;
+	p=q;
+	q=q->leg;}
+
+stiva-ordonata  
+
+#define dimMax 10
+struct Stiva{
+	int varf;
+	int stack[dimMax];
+};
+
+initializare
+s.varf=-1;
+
+//verificare stiva plina
+
+push
+int val=10;
+s.varf++;
+s.stack[s.varf]=val;
+
+//verificare stiva goala
+
+pop
+int val=s.stack[s.varf];
+s.varf--;
+return val;
+
+top:returnarea valorii din vârful stivei
+
+int val=s.stack[s.varf];
+return val;
+
+isEmpty
+if (s.varf ==-1)
+return true;
+else false;
+
+isFull
+if(s.varf==dimMax-1)
+return true;
+else false;
+
+
+
+stiva-inlantuita
+
+struct Stiva{
+int data;
+Stiva *leg;
+};
+Stiva*st;
+
+
+initializare
+st=0;
+
+
+
+push
+Stiva *p=new Stiva;
+p->data=val;
+p->leg=st;
+st=p;
+
+pop
+int val=st->data;
+Stiva *p=st;
+st=st->leg//p->leg;
+delete p;
+return val;
+
+top
+return st->data;
+
+
+isEmpty
+return(st==NULL)
+

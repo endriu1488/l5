@@ -1,0 +1,7 @@
+﻿  main.cpp
+  Header.cpp
+  Generating Code...
+d:\1204b\l5\pbl3\pbl3\header.h(29): warning C4715: 'evaluate': not all control paths return a value
+d:\1204b\l5\pbl3\pbl3\header.h(29): warning C4715: 'evaluate': not all control paths return a value
+main.obj : error LNK2005: "int __cdecl evaluate(char,int,int)" (?evaluate@@YAHDHH@Z) already defined in Header.obj
+D:\1204B\l5\pbl3\Debug\pbl3.exe : fatal error LNK1169: one or more multiply defined symbols found
